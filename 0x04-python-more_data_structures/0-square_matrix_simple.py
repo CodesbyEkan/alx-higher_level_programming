@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 
 def square_matrix_simple(matrix=[]):
-    newlist = list(matrix)
-    for i in range(3):
-        for j in range(3):
-            newlist[i][j] **= 2
+    def square_cells(array):
+        result = []
+        for cell in array:
+            result.append(cell ** 2)
+        return result
+    return list(map(square_cells, matrix))
